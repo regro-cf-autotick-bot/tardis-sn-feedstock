@@ -1,18 +1,18 @@
 {% set name = "tardis-sn" %}
-{% set version_tag = "release-2021.7.14.0" %}
+{% set version = "2021.7.14.0" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version_tag.replace('release-', '') }}
+  version: {{ version }}
 
 source:
-  - url: https://github.com/tardis-sn/tardis/archive/{{ version_tag }}.tar.gz
+  - url: https://github.com/tardis-sn/tardis/archive/release-{{ version }}.tar.gz
     sha256: b764c56c01b244fc481dae8dd36537afa19420d16a315d6d2b67161903bbd1d6
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win or py != 37]
-  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version_tag.replace('release-', '') }} {{ PYTHON }} -m pip install . --no-deps -vv  # workaround for https://github.com/pypa/setuptools_scm/issues/357
+  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . --no-deps -vv  # workaround for https://github.com/pypa/setuptools_scm/issues/357
 
 requirements:
   host:
