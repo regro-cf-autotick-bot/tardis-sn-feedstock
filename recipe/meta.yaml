@@ -1,5 +1,5 @@
 {% set name = "tardis-sn" %}
-{% set version = "2021.7.25.0" %}
+{% set version = "2021.8.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/tardis-sn/tardis/archive/release-{{ version }}.tar.gz
-    sha256: 387ac7fddb338b36fea68cd6f1bc774f2f566c3b74fffd319eb5e29665d16369
+    sha256: 3499fa5c34131c095d204b001fd67aab58c32b8c2e43eed1beae47c8370ac8d4
 
 build:
   number: 0
