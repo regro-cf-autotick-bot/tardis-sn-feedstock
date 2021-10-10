@@ -1,5 +1,5 @@
 {% set name = "tardis-sn" %}
-{% set version = "2021.9.26" %}
+{% set version = "2021.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   - url: https://github.com/tardis-sn/tardis/archive/release-{{ version }}.tar.gz
-    sha256: ffd6e3970c8b3c4677b7feb96ac9fb5f622bb0d1e74f75b4c4c168ac89d8187b
+    sha256: 737bec97b14c026f0e08aa6b67ac33c6de04947c63ed8c40fb5e5a6b6374335b
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win or py != 37]
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . --no-deps -vv  # workaround for https://github.com/pypa/setuptools_scm/issues/357
 
