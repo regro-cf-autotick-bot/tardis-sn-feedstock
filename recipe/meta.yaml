@@ -10,7 +10,7 @@ source:
     sha256: 8c2a201c2adffa23a94b60983b8fdf9af8bef3fb7a5c351fa6a485fb66869d6c
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or py != 37]
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . --no-deps -vv  # workaround for https://github.com/pypa/setuptools_scm/issues/357
 
@@ -40,7 +40,7 @@ requirements:
     - requests
     - tqdm
     - jupyter
-    - matplotlib
+    - matplotlib =3.4
     - ipywidgets
     - plotly
     - qgrid
