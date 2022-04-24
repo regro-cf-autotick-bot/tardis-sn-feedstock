@@ -1,5 +1,5 @@
 {% set name = "tardis-sn" %}
-{% set version = "2022.4.3" %}
+{% set version = "2022.4.24" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   - url: https://github.com/tardis-sn/tardis/archive/release-{{ version }}.tar.gz
-    sha256: f8761ec64651983766059cf1ace56aa4b1d60d6a51fbe74c3c11b848d736e0a4
+    sha256: 1ae212ca5005444eda88e81f7469d8721069c28053df1063b6ba985c28801f2e
 
 build:
   number: 0
-  skip: true  # [win or py != 37]
+  skip: true  # [win or py != 38]
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . --no-deps -vv  # workaround for https://github.com/pypa/setuptools_scm/issues/357
 
 requirements:
@@ -22,14 +22,14 @@ requirements:
     - pip
 
   run:
-    - python =3.7
+    - python =3.8
     - numpy =1.19
     - scipy =1.5
     - pandas =1.0
-    - astropy =3
+    - astropy =5
     - numba =0.53
     - numexpr
-    - pyne =0.7=nomoab_openmc*
+    - radioactivedecay >=0.4.12
     - networkx
     - pygraphviz
     - pyyaml
@@ -39,8 +39,8 @@ requirements:
     - pickle5
     - requests
     - tqdm
-    - jupyter
-    - matplotlib =3.4
+    - notebook
+    - matplotlib-base
     - ipywidgets
     - plotly
     - qgrid
