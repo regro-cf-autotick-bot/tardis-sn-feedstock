@@ -10,7 +10,7 @@ source:
     sha256: 29fab588677c978f4ed4ce7f1a68424794eea03040286fa023075386cbdca371
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or py != 38]
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . --no-deps -vv  # workaround for https://github.com/pypa/setuptools_scm/issues/357
 
@@ -34,8 +34,9 @@ requirements:
     - pygraphviz
     - pyyaml
     - jsonschema =3
-    - pytables
+    - hdf5 =1.10
     - h5py
+    - pytables
     - requests
     - tqdm
     - notebook
