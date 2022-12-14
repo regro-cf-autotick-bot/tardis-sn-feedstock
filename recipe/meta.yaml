@@ -10,7 +10,7 @@ source:
     sha256: 49865a9d740ac5beeaf90d1b2ee3a5fe3e3a7123ce8403c95d7bd99cd0337e49
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win or py != 38]
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . --no-deps -vv  # workaround for https://github.com/pypa/setuptools_scm/issues/357
 
