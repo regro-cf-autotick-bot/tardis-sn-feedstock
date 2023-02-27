@@ -1,11 +1,11 @@
-About tardis-sn
-===============
+About tardis-sn-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tardis-sn-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/tardis-sn/tardis
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tardis-sn-feedstock/blob/main/LICENSE.txt)
 
 Summary: TARDIS is a tool that creates synthetic observations (spectra) for exploding stars (supernovae).
 
